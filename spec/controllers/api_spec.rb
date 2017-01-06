@@ -15,4 +15,15 @@ describe Api::V1::ItemsController do
     expect(item).to have_key(:description)
     expect(item).to have_key(:image_url)
   end
+
+  it "items show" do
+    i = Item.create(name: "j", description: "k", image_url: "l")
+
+    get :show, id: i.id
+    item = JSON.parse(response.body, symbolize_names: true)
+
+    expect(item).to have_key(:name)
+    expect(item).to have_key(:description)
+    expect(item).to have_key(:image_url)
+  end
 end
