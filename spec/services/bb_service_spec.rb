@@ -15,5 +15,6 @@ describe BbService do
     expect(store).to have_key(:city)
     expect(store).to have_key(:region)
     expect(store).to have_key(:phone)
+    expect(store).to have_key(:distance)
   end
 end

@@ -14,5 +14,6 @@ describe Store do
     expect(store).to respond_to(:city)
     expect(store).to respond_to(:state)
     expect(store).to respond_to(:phone)
+    expect(store).to respond_to(:distance)
   end
 end

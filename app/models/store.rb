@@ -25,6 +25,11 @@ class Store
     @data[:phone]
   end
 
+  def distance
+    @data[:distance]
+  end
+
+
   def self.by_zip(zip)
     response = BbService.get_stores(zip)
     total = response[:total]
