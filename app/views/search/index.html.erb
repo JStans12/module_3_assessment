@@ -2,7 +2,7 @@
   Total stores: <%= @total %>
   <br>
   <% @stores.each do |store| %>
-    <p>Long Name: <%= store.long_name %></p>
+    <p>Long Name: <%= link_to store.long_name, "/search/#{store.id}" %></p>
     <p>City: <%= store.city %></p>
     <p>State: <%= store.state %></p>
     <p>Phone: <%= store.phone %></p>

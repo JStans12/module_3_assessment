@@ -5,6 +5,10 @@ class Store
     @data = data
   end
 
+  def id
+    @data[:storeId]
+  end
+
   def store_type
     @data[:storeType]
   end
