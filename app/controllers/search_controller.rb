@@ -7,6 +7,6 @@ class SearchController < ApplicationController
   end
 
   def show
-
+    @store = Store.by_id(params[:store_id])
   end
 end
