@@ -1,5 +1,6 @@
-class Store
+require './app/services/bb_service.rb'
 
+class Store
   def initialize(data)
     @data = data
   end

@@ -1,0 +1,12 @@
+<div class='container'>
+  Total stores: <%= @total %>
+  <br>
+  <% @stores.each do |store| %>
+    <p>Long Name: <%= store.long_name %></p>
+    <p>City: <%= store.city %></p>
+    <p>State: <%= store.state %></p>
+    <p>Phone: <%= store.phone %></p>
+    <p>Store Type: <%= store.store_type %></p>
+    <br><br>
+  <% end %>
+</div>

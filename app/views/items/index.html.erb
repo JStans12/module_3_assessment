@@ -1,7 +1,7 @@
 <div class="container">
   <%= form_tag '/search', method: :get do %>
-      <%= text_field_tag :search, params[:search] %>
-      <%= submit_tag "Search", name: "search", method: 'get' %>
+    <%= text_field_tag(:search) %>
+    <%= submit_tag "Search", method: 'get' %>
   <% end %>
 </div>
 
