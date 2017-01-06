@@ -36,4 +36,12 @@ describe Api::V1::ItemsController do
     expect(Item.count).to eq(1)
     expect(Item.all).to_not include(i)
   end
+
+  it "items create" do
+
+    post :create, name: "j", description: "k", image_url: "l"
+
+    expect(Item.count).to eq(1)
+    expect(Item.first.name).to eq("j")
+  end
 end
