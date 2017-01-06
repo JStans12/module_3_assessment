@@ -33,6 +33,13 @@ class Store
     @data[:distance]
   end
 
+  def hours
+    @data[:hours]
+  end
+
+  def address
+    @data[:address]
+  end
 
   def self.by_zip(zip)
     response = BbService.get_stores(zip)
@@ -41,5 +48,10 @@ class Store
       Store.new(store)
     end
     return [total, stores]
+  end
+
+  def self.by_id(id)
+    store = BbService.by_id(id)
+    Store.new(store)
   end
 end

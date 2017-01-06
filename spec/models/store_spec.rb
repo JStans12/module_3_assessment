@@ -16,4 +16,17 @@ describe Store do
     expect(store).to respond_to(:phone)
     expect(store).to respond_to(:distance)
   end
+
+  it ".by_id" do
+
+    store = Store.by_id(2387)
+
+    expect(store).to respond_to(:store_type)
+    expect(store).to respond_to(:long_name)
+    expect(store).to respond_to(:city)
+    expect(store).to respond_to(:state)
+    expect(store).to respond_to(:phone)
+    expect(store).to respond_to(:hours)
+    expect(store).to respond_to(:address)
+  end
 end
