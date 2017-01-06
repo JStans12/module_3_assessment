@@ -4,7 +4,7 @@ describe BbService do
   it "#get_stores" do
 
 
-    response = BbService.get_stores
+    response = BbService.get_stores(80202)
     stores = response[:stores]
     store = stores.first
 
