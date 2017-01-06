@@ -26,4 +26,14 @@ describe Api::V1::ItemsController do
     expect(item).to have_key(:description)
     expect(item).to have_key(:image_url)
   end
+
+  it "items destroy" do
+    i = Item.create(name: "j", description: "k", image_url: "l")
+    j = Item.create(name: "m", description: "n", image_url: "o")
+
+    delete :destroy, id: i.id
+
+    expect(Item.count).to eq(1)
+    expect(Item.all).to_not include(i)
+  end
 end
